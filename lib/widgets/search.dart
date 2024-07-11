@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
+
 class Search extends StatelessWidget {
-   Search({super.key});
-  final TextEditingController textcontoller=TextEditingController();
+  Search({super.key});
+  final TextEditingController textcontoller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Padding(

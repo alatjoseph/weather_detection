@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/widgets/search.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:weather_app/widgets/search.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -116,21 +116,15 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  getcurrentlocation() async{
-        var pos= await Geolocator.getCurrentPosition(
-           desiredAccuracy : LocationAccuracy.low,
-           forceAndroidLocationManager: true
-        );
+  getcurrentlocation() async {
+    var pos = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.low,
+        forceAndroidLocationManager: true);
 
-        if(pos!=Null)
-        {
-
-          print('Lat=${pos.latitude} long=${pos.longitude}');
-        }
-        else
-        {
-          print('not get');
-        }
-
- }
+    if (pos != Null) {
+      print('Lat=${pos.latitude} long=${pos.longitude}');
+    } else {
+      print('not get');
+    }
+  }
 }
